@@ -2,8 +2,8 @@ name: openmc-env
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
-  - openmc=0.15.3
+  - python
+  - openmc
   - streamlit
   - numpy
   - matplotlib
