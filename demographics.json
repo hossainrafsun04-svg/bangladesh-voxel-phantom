@@ -1,0 +1,10 @@
+{
+  "bangladesh": {
+    "height_cm": 172.0,
+    "weight_kg": 70.5
+  },
+  "icrp_reference_male": {
+    "height_cm": 176.0,
+    "weight_kg": 73.0
+  }
+}

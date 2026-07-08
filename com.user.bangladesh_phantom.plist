@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.bangladesh_phantom</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/anaconda3/envs/openmc-env/bin/streamlit</string>
+        <string>run</string>
+        <string>/Users/rafsunhossain/.gemini/antigravity/scratch/bangladesh_voxel_phantom/dashboard.py</string>
+        <string>--server.port</string>
+        <string>8501</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/rafsunhossain/.gemini/antigravity/scratch/bangladesh_voxel_phantom</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/rafsunhossain/.gemini/antigravity/scratch/bangladesh_voxel_phantom/dashboard_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/rafsunhossain/.gemini/antigravity/scratch/bangladesh_voxel_phantom/dashboard_stderr.log</string>
+</dict>
+</plist>

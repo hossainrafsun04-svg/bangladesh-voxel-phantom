@@ -1,0 +1,82 @@
+[
+  {
+    "organ_id": 1,
+    "organ_name": "Skeleton",
+    "voxel_count": 39770,
+    "volume_cc": 318.1600000000001,
+    "density_g_cc": 1.92,
+    "mass_g": 610.8672000000001,
+    "heating_mean_ev": 3923.391527261284,
+    "heating_std_ev": 141.53264546156004
+  },
+  {
+    "organ_id": 2,
+    "organ_name": "Lungs",
+    "voxel_count": 25531,
+    "volume_cc": 204.24800000000005,
+    "density_g_cc": 0.26,
+    "mass_g": 53.10448000000002,
+    "heating_mean_ev": 192.82847034866853,
+    "heating_std_ev": 4.735334498966805
+  },
+  {
+    "organ_id": 3,
+    "organ_name": "Brain",
+    "voxel_count": 41400,
+    "volume_cc": 331.2000000000001,
+    "density_g_cc": 1.04,
+    "mass_g": 344.4480000000001,
+    "heating_mean_ev": 837.6276359051378,
+    "heating_std_ev": 15.034677930345484
+  },
+  {
+    "organ_id": 4,
+    "organ_name": "Heart",
+    "voxel_count": 3877,
+    "volume_cc": 31.01600000000001,
+    "density_g_cc": 1.06,
+    "mass_g": 32.87696000000001,
+    "heating_mean_ev": 130.24982423021908,
+    "heating_std_ev": 11.965191317534199
+  },
+  {
+    "organ_id": 5,
+    "organ_name": "Liver",
+    "voxel_count": 11304,
+    "volume_cc": 90.43200000000002,
+    "density_g_cc": 1.06,
+    "mass_g": 95.85792000000002,
+    "heating_mean_ev": 419.59740424323735,
+    "heating_std_ev": 7.1861772825902825
+  },
+  {
+    "organ_id": 6,
+    "organ_name": "Kidneys",
+    "voxel_count": 3100,
+    "volume_cc": 24.800000000000004,
+    "density_g_cc": 1.05,
+    "mass_g": 26.040000000000006,
+    "heating_mean_ev": 72.2058514092566,
+    "heating_std_ev": 9.08027623304524
+  },
+  {
+    "organ_id": 7,
+    "organ_name": "Skin",
+    "voxel_count": 44676,
+    "volume_cc": 357.4080000000001,
+    "density_g_cc": 1.09,
+    "mass_g": 389.5747200000001,
+    "heating_mean_ev": 1222.7951100159771,
+    "heating_std_ev": 14.713170838242565
+  },
+  {
+    "organ_id": 8,
+    "organ_name": "Muscle",
+    "voxel_count": 392942,
+    "volume_cc": 3143.536000000001,
+    "density_g_cc": 1.05,
+    "mass_g": 3300.712800000001,
+    "heating_mean_ev": 11925.6657005671,
+    "heating_std_ev": 122.49514223421548
+  }
+]
