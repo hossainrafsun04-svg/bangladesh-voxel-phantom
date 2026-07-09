@@ -16,8 +16,12 @@ RUN mamba install -y \
     pandas \
     && conda clean --all --yes
 
-# Set environment paths
-ENV OPENMC_CROSS_SECTIONS="/opt/conda/share/openmc/cross_sections.xml"
+# Install openmc_data_downloader and download cross-sections for target elements (both neutron and photon)
+RUN pip install --no-cache-dir openmc_data_downloader \
+    && openmc_data_downloader -l ENDFB-7.1-NNDC -e H C N O Na Mg P S Cl K Ca Fe Ar -d /app/nndc_data -p neutron photon
+
+# Set environment paths to point to the downloaded cross-sections
+ENV OPENMC_CROSS_SECTIONS="/app/nndc_data/cross_sections.xml"
 
 # Default port, Render/Railway will override this using the PORT env variable
 EXPOSE 8501
