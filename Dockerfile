@@ -8,6 +8,7 @@ COPY . /app
 
 # Install openmc and other dependencies using mamba (pre-installed and fast)
 RUN mamba install -y \
+    python=3.11 \
     openmc \
     streamlit \
     numpy \
