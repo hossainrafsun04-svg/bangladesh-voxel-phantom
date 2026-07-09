@@ -17,8 +17,8 @@ RUN micromamba install -y -n base -c conda-forge \
 ENV PATH="/opt/conda/bin:${PATH}"
 ENV OPENMC_CROSS_SECTIONS="/opt/conda/share/openmc/cross_sections.xml"
 
-# Hugging Face Spaces listens on port 7860 by default
-EXPOSE 7860
+# Default port, Render will automatically override this using the PORT env variable
+EXPOSE 8501
 
-# Command to run the dashboard
-CMD ["streamlit", "run", "dashboard.py", "--server.port", "7860", "--server.address", "0.0.0.0"]
+# Run streamlit app dynamically binding to PORT
+CMD streamlit run dashboard.py --server.port ${PORT:-8501} --server.address 0.0.0.0
