@@ -1,4 +1,4 @@
-FROM mambaorg/micromamba:1.5.8-ubuntu22.04
+FROM mambaorg/micromamba:jammy
 
 # Copy all codebase files into the container
 COPY --chown=micromamba:micromamba . /app
