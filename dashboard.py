@@ -16,12 +16,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling (sleek dark mode and premium look)
+# Custom Styling (premium light mode with black/dark charcoal text)
 st.markdown("""
 <style>
     .main {
-        background-color: #0f172a;
-        color: #f8fafc;
+        background-color: #f8fafc;
+        color: #0f172a;
     }
     .stButton>button {
         background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -37,18 +37,23 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
     }
     .sidebar .sidebar-content {
-        background-color: #1e293b;
+        background-color: #f1f5f9;
     }
     .card {
-        background-color: #1e293b;
+        background-color: #ffffff;
         padding: 1.5rem;
         border-radius: 0.75rem;
-        border: 1px solid #334155;
+        border: 1px solid #e2e8f0;
         margin-bottom: 1rem;
+        color: #0f172a;
     }
     h1, h2, h3 {
-        color: #f1f5f9 !important;
+        color: #0f172a !important;
         font-family: 'Outfit', 'Inter', sans-serif;
+    }
+    /* Explicitly force all paragraph, list, label, and markdown text to be dark slate/black */
+    .stMarkdown, p, span, label, li, div {
+        color: #0f172a;
     }
 </style>
 """, unsafe_allow_html=True)
