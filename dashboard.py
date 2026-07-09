@@ -7,6 +7,7 @@ import os
 import subprocess
 import time
 import pandas as pd
+import sys
 
 # Set page design
 st.set_page_config(
@@ -153,9 +154,9 @@ if (height != demo_data['bangladesh']['height_cm']) or (weight != demo_data['ban
         json.dump(demo_data, f, indent=2)
         
     # Re-generate scaling ratios
-    subprocess.run(["/opt/anaconda3/envs/openmc-env/bin/python", "scale_generator.py"], cwd=BASE_DIR)
+    subprocess.run([sys.executable, "scale_generator.py"], cwd=BASE_DIR)
     # Re-generate phantom geometry
-    subprocess.run(["/opt/anaconda3/envs/openmc-env/bin/python", "phantom_generator.py"], cwd=BASE_DIR)
+    subprocess.run([sys.executable, "phantom_generator.py"], cwd=BASE_DIR)
     st.sidebar.success("Phantom model updated and rescaled successfully!")
 
 # Load current scaling factors
@@ -247,7 +248,7 @@ with tab_simulation:
         
         # Launch subprocess pointing to the OpenMC python executable
         cmd = [
-            "/opt/anaconda3/envs/openmc-env/bin/python", 
+            sys.executable, 
             "openmc_simulation.py", 
             "--energy", str(energy_kev), 
             "--particles", str(particles)
@@ -448,7 +449,7 @@ with tab_energy_sweep:
         st.info("Executing background energy sweep simulation pipeline...")
         log_text = ""
         process = subprocess.Popen(
-            ["/opt/anaconda3/envs/openmc-env/bin/python", "run_energy_sweep.py"], 
+            [sys.executable, "run_energy_sweep.py"], 
             cwd=BASE_DIR, 
             stdout=subprocess.PIPE, 
             stderr=subprocess.STDOUT, 
