@@ -20,8 +20,11 @@ def run_simulation(energy_kev=100.0, particles=10000):
     phantom = data['phantom']
     nz, ny, nx = phantom.shape
     
-    # Set cross sections environment variable
-    cross_sec_path = '/Users/rafsunhossain/nndc_/cross_sections.xml'
+    # Set cross sections environment variable dynamically
+    default_cross_sec = '/Users/rafsunhossain/nndc_/cross_sections.xml'
+    cross_sec_path = os.environ.get('OPENMC_CROSS_SECTIONS', default_cross_sec)
+    if not os.path.exists(cross_sec_path) and os.path.exists(default_cross_sec):
+        cross_sec_path = default_cross_sec
     os.environ['OPENMC_CROSS_SECTIONS'] = cross_sec_path
     print(f"  Cross-Sections path: {cross_sec_path}")
     

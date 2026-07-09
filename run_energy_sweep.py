@@ -29,7 +29,12 @@ def run_sweep():
         voxel_count = np.sum(phantom == i)
         masses.append(voxel_count * voxel_volume * densities[i-1])
         
-    os.environ['OPENMC_CROSS_SECTIONS'] = '/Users/rafsunhossain/nndc_/cross_sections.xml'
+    # Set cross sections environment variable dynamically
+    default_cross_sec = '/Users/rafsunhossain/nndc_/cross_sections.xml'
+    cross_sec_path = os.environ.get('OPENMC_CROSS_SECTIONS', default_cross_sec)
+    if not os.path.exists(cross_sec_path) and os.path.exists(default_cross_sec):
+        cross_sec_path = default_cross_sec
+    os.environ['OPENMC_CROSS_SECTIONS'] = cross_sec_path
     
     for energy in energies_kev:
         print(f"Executing OpenMC simulation for energy = {energy} keV...")
