@@ -57,7 +57,7 @@ def run_sweep():
         settings.export_to_xml()
         
         # Run OpenMC
-        openmc.run(openmc_exec='/opt/anaconda3/envs/openmc-env/bin/openmc')
+        openmc.run()
         
         # Read tally results
         sp = openmc.StatePoint('statepoint.5.h5')

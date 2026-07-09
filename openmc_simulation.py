@@ -232,7 +232,7 @@ def run_simulation(energy_kev=100.0, particles=10000):
     
     # 6. Run simulation
     print("Running OpenMC execution...")
-    openmc.run(openmc_exec='/opt/anaconda3/envs/openmc-env/bin/openmc')
+    openmc.run()
     
     # 7. Process Results
     sp_filename = 'statepoint.5.h5'
